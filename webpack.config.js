@@ -74,21 +74,22 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
+              // name: 'images/[name].[hash].[ext]'
               name: 'images/[name].[hash].[ext]'
             }
           }
         ]
       },
+
       {
         test: /\.(eot|ttf|otf|woff|woff2)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'fonts/[name].[ext]'
-            }
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts'
           }
-        ]
+        }
       },
 
       {
