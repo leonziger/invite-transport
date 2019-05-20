@@ -6,7 +6,13 @@
   }
 
   &__item {
-    padding: 14px 21px;
+    padding: 14px 17px;
+    border: 6px solid transparent;
+
+    &:hover {
+      border-bottom-color: #11749e;
+      cursor: pointer;
+    }
 
     @media(max-width: 768px) {
       padding: 18px 24px 15px;
@@ -20,7 +26,7 @@
 
   &__link {
     color: #ffffff;
-    font-family: "MyriadPro", sans-serif;
+    font-family: 'MyriadPro', sans-serif;
     font-size: 20px;
     font-weight: 400;
   }
@@ -29,7 +35,7 @@
   @media (max-width: 991px){
     padding: 0;
     opacity: .9;
-    transition: $delay*4;
+    transition: 1s;
     font-size: 18px;
 
     &__list {

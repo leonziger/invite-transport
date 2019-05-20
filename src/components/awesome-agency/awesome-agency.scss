@@ -1,0 +1,70 @@
+.awesome-agency {
+  background: #11749e;
+  min-height: 737px;
+  padding-top: 100px;
+
+  &__headline {
+    background-image: url(awesome-agency_bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 176px;
+    color: #ffffff;
+    font-family: 'Gotham', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 36px;
+    flex-wrap: wrap;
+    margin-bottom: 66px;
+  }
+
+  &__features {
+    margin-left: -6px;
+  }
+
+  &__feature {
+    text-align: center;
+    margin-bottom: 30px;
+
+    &-icon {
+      border-radius: 50%;
+      width: 133px;
+      height: 133px;
+      background-color: #2e85aa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 14px;
+
+      .icon {
+        display: inline-flex;
+
+        svg {
+          font-size: 33px;
+        }
+      }
+    }
+
+    &-title {
+      color: #ffffff;
+      font-family: 'Gotham', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 36px;
+      text-transform: uppercase;
+      padding-bottom: 19px;
+    }
+
+    &-description {
+      color: #ffffff;
+      font-family: 'GothamBook', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}
