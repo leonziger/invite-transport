@@ -10,6 +10,19 @@
     text-align: center;
     padding-bottom: 65px;
     margin-left: 25px;
+
+    @media(max-width: 1200px) {
+      margin-left: 0;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media(max-width: 576px) {
+      font-size: 20px;
+      line-height: 1;
+    }
   }
 
   &__headline {
@@ -40,12 +53,9 @@
       background: none;
       min-height: 50px;
       height: auto;
+      margin-bottom: 0;
     }
 
-  }
-
-  &__posts {
-    margin-left: -6px;
   }
 
   &__post {
@@ -55,6 +65,10 @@
 
     &-img {
       margin-bottom: 44px;
+
+      @media(max-width: 1200px) {
+        margin-bottom: 14px;
+      }
     }
 
     &-title {

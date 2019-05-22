@@ -1,8 +1,8 @@
-<div class="main-header" >
-  <div class="main-header__container">
+<div class="main-header" id="home">
+  <div class="container main-header__container">
     <div class="main-header__logo">
-      <a href="/">
-        <img src="logo.png" alt="">
+      <a href="#home">
+        <img src="logo.png" alt="" class="main-header__logo-img">
       </a>
     </div>
     <div class="main-header__nav">
@@ -10,6 +10,9 @@
     </div>
     <div class="main-header__social-media">
       {{> ../social-media/social-media }}
+    </div>
+    <div class="main-header__menu-toggle">
+      {{> ../menu-toggle/menu-toggle }}
     </div>
   </div>
 </div>

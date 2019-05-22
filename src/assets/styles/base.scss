@@ -144,6 +144,15 @@ button {
 }
 
 .container {
-  outline: 1px solid red;
+  //outline: 1px solid red;
+
+  @media(min-width: 1200px) {
+    max-width: 1200px;
+
+  }
+
+  &:before, &:after {
+    display: none;
+  }
 }
 

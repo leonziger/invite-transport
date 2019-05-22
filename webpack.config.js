@@ -94,7 +94,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
+            name: '[name].[hash].[ext]',
             outputPath: 'fonts'
           }
         }
@@ -126,12 +126,6 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       filename: 'style.css',
-    }),
-
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery'
     })
   ]
 };
