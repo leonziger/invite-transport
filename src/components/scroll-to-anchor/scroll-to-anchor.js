@@ -1,4 +1,5 @@
 import $ from 'jquery';
+global.jQuery = global.$ = $;
 
 const widthOfScreen = $(window).width();
 

@@ -143,15 +143,7 @@ button {
   }
 }
 
-.h2_subtitle {
-  font-family: 'Helvetica-8-Heavy', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 800;
-  letter-spacing: -1px;
-
-  @media(max-width: 576px) {
-    font-size: 14px;
-    line-height: 1;
-  }
+.container {
+  outline: 1px solid red;
 }
+
