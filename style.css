@@ -1037,14 +1037,14 @@
   font-family: 'GothamBook';
   src: url(fonts/gotham-book.eot);
   src: local("Gotham"), local("gotham"), url(fonts/gotham-book.eot) format("embedded-opentype"), url(fonts/gotham-book.woff) format("woff"), url(fonts/gotham-book.ttf) format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gotham';
   src: url(fonts/gotham-pro-medium.eot);
   src: local("Gotham"), local("gotham"), url(fonts/gotham-pro-medium.eot) format("embedded-opentype"), url(fonts/gotham-pro-medium.woff) format("woff"), url(fonts/gotham-pro-medium.ttf) format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal; }
 
 @font-face {
