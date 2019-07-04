@@ -1,0 +1,185 @@
+.features {
+
+  &-top {
+    min-height: 355px;
+    background-color: #11749e;
+    color: #ffffff;
+    font-family: 'GothamBook', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 115px;
+
+    @media(max-width: 992px) {
+      padding-top: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    @media(max-width: 768px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -4px;
+      margin-bottom: 25px;
+
+      @media(max-width: 375px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      margin-right: 36px;
+
+      @media(max-width: 375px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .icon {
+        display: inline-flex;
+
+        svg {
+          font-size: 69px;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    min-height: 848px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url(features_bottom_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+
+    &__container {
+      display: flex;
+      align-items: center;
+
+      @media(max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+
+    }
+
+    &__image {
+      text-align: center;
+
+      @media(max-width: 1400px) {
+        text-align: right;
+      }
+
+      @media(max-width: 768px) {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+    }
+
+    &__text {
+      color: #ffffff;
+      font-family: 'Gotham', sans-serif;
+      margin-top: 4px;
+
+      @media(max-width: 1400px) {
+        padding-left: 50px;
+      }
+
+      @media(max-width: 993px) {
+        padding-left: 15px;
+      }
+
+      @media(max-width: 768px) {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+      @media(max-width: 375px) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      &-title {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 36px;
+        text-transform: uppercase;
+        margin-bottom: 27px;
+
+        @media(max-width: 768px) {
+          text-align: center;
+        }
+      }
+
+      &-description {
+        font-family: 'GothamBook', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 73px;
+      }
+    }
+
+    &__item {
+      font-family: 'Gotham', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 38px;
+
+      &-wrap {
+        width: 370px;
+        height: 38px;
+        background-color: #11749e;
+        padding: 11px 150px 11px 25px;
+      }
+    }
+  }
+
+  .item {
+    &-one {
+      padding-right: 125px;
+
+      @media(max-width: 1200px) {
+        padding: 11px 25px 11px 25px;
+      }
+
+      @media(max-width: 375px) {
+        padding: 11px;
+      }
+    }
+    &-two {
+      padding-right: 215px;
+
+      @media(max-width: 1200px) {
+        padding: 11px 25px 11px 25px;
+      }
+
+      @media(max-width: 375px) {
+        padding: 11px;
+      }
+    }
+    &-three {
+      padding-right: 150px;
+
+      @media(max-width: 1200px) {
+        padding: 11px 25px 11px 25px;
+      }
+
+      @media(max-width: 375px) {
+        padding: 11px;
+      }
+    }
+  }
+}

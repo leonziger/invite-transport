@@ -1,0 +1,59 @@
+.our-team {
+  padding-top: 67px;
+  padding-bottom: 73px;
+
+  &__headline {
+    background-image: url(our-team_bg.png);
+    margin-bottom: 61px;
+
+    @media(max-width: 576px) {
+      background: none;
+    }
+  }
+
+  &__after-headline {
+    padding-bottom: 60px;
+  }
+
+  &__members {
+
+  }
+
+  &__member {
+    position: relative;
+
+     img {
+       height: 414px;
+       margin-bottom: 0;
+
+       @media(max-width: 1200px) {
+         height: auto;
+       }
+    }
+
+    &-info {
+      position: absolute;
+      bottom: -36px;
+      right: 0;
+      left: 0;
+      max-width: 200px;
+      margin: 0 auto;
+      padding: 18px 15px 20px;
+      background-color: #fff;
+
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 8px;
+    }
+
+    &-description {
+      font-size: 15px;
+      line-height: 1;
+    }
+  }
+
+
+}

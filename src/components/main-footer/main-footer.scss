@@ -1,0 +1,30 @@
+.main-footer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.26px;
+
+  min-height: 115px;
+  background-color: #222222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  &__copy {
+    margin-top: 8px;
+
+    @media(max-width: 992px) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__company {
+    text-align: right;
+
+    @media(max-width: 992px) {
+      text-align: center;
+    }
+  }
+
+}

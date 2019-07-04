@@ -1,6 +1,6 @@
 .main-banner {
-  padding-top: 14px;
-  min-height: 881px;
+  padding-top: 4px;
+  min-height: 871px;
   background-image: url(./header_bg.png);
   background-position: top center;
   background-repeat: no-repeat;
@@ -12,7 +12,6 @@
   }
 
   &__headline {
-    font-family: 'Gotham', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +24,7 @@
     }
 
   &__standard {
+    font-family: 'Gotham', sans-serif;
     color: #fff;
     font-size: 151px;
     font-weight: 700;
@@ -48,6 +48,7 @@
   }
 
   &__marked {
+    font-family: 'Gotham', sans-serif;
     color: #11749e;
     font-size: 24px;
     font-weight: 500;
