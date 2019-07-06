@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Invite transportation service</title>
-  <link href="style.css?31f06852724950242bdb" rel="stylesheet"><script type="text/javascript" src="bundle.js?31f06852724950242bdb" defer></script></head>
+  <link href="style.css?6cb45d15af6ec712db35" rel="stylesheet"><script type="text/javascript" src="bundle.js?6cb45d15af6ec712db35" defer></script></head>
   <body>
     <main class="main-wrapper">
       <section class="main-banner">
@@ -117,8 +117,7 @@
         <div class="pages__item ">
           <div class="container pages__container page page-one">
             <div class="page__image-content" style="background-image:
-              url(images/page1.07e365b9fb1410d1146ecdfa186c69b9.png)">
-            </div>
+              url(images/page1.07e365b9fb1410d1146ecdfa186c69b9.png)"></div>
             <div class="page__text-content">
               <div class="page__text-inner">
                 <div class="page__service-info">
@@ -271,7 +270,7 @@
       <section class="contact-us" id="contact-us">
         <div class="container" id="form">
           <h2 class="headline contact-us__headline">We’d love to hear about your project</h2>
-          <form method="post" class="contact-us__form">
+          <form method="post" class="contact-us__form" @submit.prevent="handleSubmit">
             <div class="row">
               <div class="col-md-4">
                 <input type="text" name="name" class="contact-us__input-field" placeholder="Name" autocomplete="off">
