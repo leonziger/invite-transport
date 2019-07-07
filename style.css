@@ -1228,14 +1228,18 @@ button {
   padding: 0; }
   .nav__list {
     display: flex; }
-  .nav__item {
+  .nav__link {
+    color: #ffffff;
+    font-family: 'MyriadPro', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
     padding: 14px 18px 34px;
     border: 6px solid transparent;
     position: relative;
     transition: 0.3s; }
-    .nav__item:hover {
+    .nav__link:hover {
       cursor: pointer; }
-      .nav__item:hover:before {
+      .nav__link:hover:before {
         content: '';
         position: absolute;
         right: 0;
@@ -1244,17 +1248,12 @@ button {
         height: 6px;
         background-color: #11749e; }
     @media (max-width: 768px) {
-      .nav__item {
+      .nav__link {
         padding: 18px 24px 15px; } }
     @media (max-width: 375px) {
-      .nav__item {
+      .nav__link {
         padding: 18px 24px 14px; } }
-  .nav__link {
-    color: #ffffff;
-    font-family: 'MyriadPro', sans-serif;
-    font-size: 20px;
-    font-weight: 400; }
-  @media (max-width: 1199px) {
+  @media (max-width: 1200px) {
     .nav {
       padding: 0;
       opacity: .9;
@@ -1522,9 +1521,6 @@ button {
     padding-top: 18px; }
     @media (max-width: 1200px) {
       .main-header__nav {
-        display: none; } }
-    @media (max-width: 1199px) {
-      .main-header__nav {
         display: flex;
         padding-top: 60px;
         width: 80%;
@@ -1536,7 +1532,7 @@ button {
         background: #626262;
         transform: translateX(800px);
         transition: .4s; } }
-    @media (max-width: 1199px) {
+    @media (max-width: 1200px) {
       .main-header__nav .nav {
         margin-left: 20px;
         flex-direction: column;
@@ -1888,9 +1884,16 @@ button {
   .our-team__after-headline {
     padding-bottom: 60px; }
   .our-team__member {
-    position: relative; }
+    display: block;
+    position: relative;
+    transition: 0.3s;
+    height: 414px; }
+    .our-team__member:hover {
+      transform: scale(1.1); }
+    .our-team__member-wrap {
+      overflow: hidden; }
     .our-team__member img {
-      height: 414px;
+      max-height: 100%;
       margin-bottom: 0; }
       @media (max-width: 1200px) {
         .our-team__member img {
