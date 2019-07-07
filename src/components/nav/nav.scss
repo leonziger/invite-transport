@@ -5,7 +5,11 @@
     display: flex;
   }
 
-  &__item {
+  &__link {
+    color: #ffffff;
+    font-family: 'MyriadPro', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
     padding: 14px 18px 34px;
     border: 6px solid transparent;
     position: relative;
@@ -32,18 +36,10 @@
     @media(max-width: 375px) {
       padding: 18px 24px 14px;
     }
-
-  }
-
-  &__link {
-    color: #ffffff;
-    font-family: 'MyriadPro', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
   }
 
 
-  @media (max-width: 1199px){
+  @media (max-width: 1200px){
     padding: 0;
     opacity: .9;
     transition: 1s;

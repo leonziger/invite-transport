@@ -1,7 +1,7 @@
 <section class="contact-us" id="contact-us">
-  <div class="container" id="form">
+  <div class="container" >
     <h2 class="headline contact-us__headline">We’d love to hear about your project</h2>
-    <form method="post" class="contact-us__form">
+    <form class="contact-us__form" @submit.prevent="handleSubmit" id="form" novalidate>
       <div class="row">
         <div class="col-md-4">
           <input type="text" name="name" class="contact-us__input-field" placeholder="Name" autocomplete="off">
@@ -112,7 +112,8 @@
             }
           ]
         });
-      }
+      };
+
     </script>
   </div>
 </div>

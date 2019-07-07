@@ -15,15 +15,22 @@
     padding-bottom: 60px;
   }
 
-  &__members {
-
-  }
-
   &__member {
+    display: block;
     position: relative;
+    transition: 0.3s;
+    height: 414px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &-wrap {
+      overflow: hidden;
+    }
 
      img {
-       height: 414px;
+       max-height: 100%;
        margin-bottom: 0;
 
        @media(max-width: 1200px) {
