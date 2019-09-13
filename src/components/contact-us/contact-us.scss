@@ -30,23 +30,41 @@
       padding-left: 15px;
       padding-right: 15px;
     }
+
+    &-errors {
+      margin-top: -30px;
+      margin-bottom: 30px;
+    }
   }
 
-  &__input {
+  &__field {
     width: 100%;
+    height: 48px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    padding: 15px 25px;
+    margin-bottom: 39px;
 
-    &-field {
-      width: 100%;
-      height: 48px;
-      border: 1px solid #ffffff;
-      background-color: transparent;
-      color: #fff;
-      font-size: 15px;
-      padding: 15px 25px;
-      margin-bottom: 39px;
+    &_mistake {
+      border: 1px solid lightblue;
     }
 
-    &-area {
+    &_active {
+      border: 1px solid #00a2ff;
+    }
+
+    &-error {
+      display: block;
+      color: #00a2ff;
+      margin-top: -35px;
+      margin-left: 10px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__area {
       width: 100%;
       height: 151px;
       border: 1px solid #ffffff;
@@ -55,9 +73,8 @@
       font-size: 15px;
       padding: 15px 25px;
       margin-bottom: 46px;
-
     }
-  }
+
 
   &__submit {
     margin: 0 auto;

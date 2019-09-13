@@ -1,28 +1,54 @@
 <section class="contact-us" id="contact-us">
   <div class="container" >
     <h2 class="headline contact-us__headline">We’d love to hear about your project</h2>
-    <form class="contact-us__form" @submit.prevent="handleSubmit" id="form" novalidate>
+    <form method="post" class="contact-us__form" @submit.prevent="checkForm" id="vue-form" novalidate>
       <div class="row">
         <div class="col-md-4">
-          <input type="text" name="name" class="contact-us__input-field" placeholder="Name" autocomplete="off">
+          <div class="contact-us__field-wrapper">
+            <input type="text"
+                   name="name"
+                   placeholder="Name"
+                   class="contact-us__field"
+                   autocomplete="off"
+                  v-model="name"
+                   @focus="showField" @blur="checkForm" >
+            <p class="contact-us__field-error" v-text="name_error"></p>
+          </div>
         </div>
         <div class="col-md-4">
-          <input type="email" name="email" class="contact-us__input-field" placeholder="Email" autocomplete="off"
-                 v-model="email" >
-          <div class="error" v-show="email &amp;&amp; !isEmailValid"><span>Неправильный email </span><span class="ion-alert-circled"></span></div>
+          <div class="contact-form__field-wrapper">
+            <input type="email"
+                  name="email"
+                  class="contact-us__field"
+                  placeholder="Email"
+                  autocomplete="off"
+                  v-model="email"
+                   @focus="showField" @blur="checkForm" >
+            <p class="contact-us__field-error" v-text="email_error"></p>
+          </div>
         </div>
 
         <div class="col-md-4">
-          <input type="phone" name="phone" class="contact-us__input-field" placeholder="Phone" autocomplete="off">
+          <div class="contact-form__field-wrapper">
+            <input type="phone"
+                   placeholder="380000000000" @keypress="validPhone"
+                 name="phone"
+                 class="contact-us__field"
+                 autocomplete="off"
+                 v-model="phone"
+                 @focus="showField" @blur="checkForm" >
+            <p class="contact-us__field-error" v-text="phone_error"></p>
+          </div>
         </div>
       </div>
-      <textarea name="message" id="" cols="30" rows="10" class="contact-us__input-area" placeholder="Message"></textarea>
-      <button type="submit" class="contact-us__submit" :class="{ &quot;-valid&quot; : isEmailValid }">Submit</button>
+      <textarea name="message" id="" placeholder="Message" cols="30" rows="10" class="contact-us__area" v-model="message"></textarea>
 
+      <button type="submit" class="contact-us__submit">Submit</button>
 
     </form>
   </div>
 </section>
+
 <div class="contact-us__map">
   <div class="div" id="map">
     <script>
