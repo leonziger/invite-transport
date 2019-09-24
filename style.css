@@ -1057,6 +1057,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   font-family: inherit; }
 
 :focus {
@@ -1071,11 +1072,6 @@
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.3px; }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
 
 li {
   list-style: none; }
