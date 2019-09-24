@@ -6,24 +6,22 @@
         <div class="col-md-4">
           <div class="contact-us__field-wrapper">
             <input type="text"
-                   name="name"
                    placeholder="Name"
                    class="contact-us__field"
                    autocomplete="off"
                   v-model="name"
-                   @focus="showField" @blur="checkForm" >
+                   @focus="showField" @blur="checkFields" >
             <p class="contact-us__field-error" v-text="name_error"></p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="contact-form__field-wrapper">
             <input type="email"
-                  name="email"
                   class="contact-us__field"
                   placeholder="Email"
                   autocomplete="off"
                   v-model="email"
-                   @focus="showField" @blur="checkForm" >
+                   @focus="showField" @blur="checkFields" >
             <p class="contact-us__field-error" v-text="email_error"></p>
           </div>
         </div>
@@ -32,11 +30,10 @@
           <div class="contact-form__field-wrapper">
             <input type="phone"
                    placeholder="380000000000" @keypress="validPhone"
-                 name="phone"
                  class="contact-us__field"
                  autocomplete="off"
                  v-model="phone"
-                 @focus="showField" @blur="checkForm" >
+                 @focus="showField" @blur="checkFields" >
             <p class="contact-us__field-error" v-text="phone_error"></p>
           </div>
         </div>

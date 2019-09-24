@@ -20,17 +20,22 @@ new Vue({
   methods: {
 
     checkForm: function(e) {
-      e.target.classList.remove('contact-us__field_active');
+
+      this.checkFields(e);
 
       if (this.name && this.phone && this.email) {
-        //console.log('All fields are full.');
         this.name_error = '';
         this.email_error = '';
         this.phone_error = '';
-        alert("Thanks for filling this form'");
+          alert("Thanks for filling this form'");
         this.clearForm();
         return true;
       }
+
+    },
+
+    checkFields: function(e) {
+      e.target.classList.remove('contact-us__field_active');
 
       if (!this.name) {
         this.name_error = 'Write your name.';
@@ -48,7 +53,6 @@ new Vue({
         this.email_error = '';
       }
 
-
       if (!this.phone) {
         this.phone_error = 'Write your phone.';
       } else if (!this.validPhone(this.phone)) {
@@ -57,8 +61,6 @@ new Vue({
         this.phone_error = '';
       }
 
-      console.log('name = '+this.name, ' phone=' + this.phone);
-      console.log('email = '+this.email);
     },
 
     validPhone(phone) {
