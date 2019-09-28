@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Invite transportation service</title>
-  <link href="style.css?5a4547c7d22b306a6c9b" rel="stylesheet"><script type="text/javascript" src="bundle.js?5a4547c7d22b306a6c9b" defer></script></head>
+  <link href="style.css?8e34ae558a037ea82cb8" rel="stylesheet"><script type="text/javascript" src="bundle.js?8e34ae558a037ea82cb8" defer></script></head>
   <body>
       <section class="main-banner">
         <div class="main-header" id="home">
@@ -274,7 +274,7 @@
                          autocomplete="off"
                          v-model="name"
                          @focus="showField"
-                         @keypress="checkFields"
+                         @input="checkFields"
                          @blur="checkFields" >
                   <p class="contact-us__field-error" v-text="name_error"></p>
                 </div>
@@ -282,12 +282,12 @@
               <div class="col-md-4">
                 <div class="contact-form__field-wrapper">
                   <input type="email"
-                        class="contact-us__field"
-                        placeholder="Email"
-                        autocomplete="off"
-                        v-model="email"
+                         class="contact-us__field"
+                          placeholder="Email"
+                          autocomplete="off"
+                          v-model="email"
                          @focus="showField"
-                         @keypress="checkFields"
+                         @input="checkFields"
                          @blur="checkFields" >
                   <p class="contact-us__field-error" v-text="email_error"></p>
                 </div>
@@ -297,11 +297,11 @@
                 <div class="contact-form__field-wrapper">
                   <input type="phone"
                          placeholder="380 XX XXX XX XX"
-                       class="contact-us__field"
-                       autocomplete="off"
-                       v-model="phone"
-                       @focus="showField"
-                         @keypress="checkFields"
+                         class="contact-us__field"
+                         autocomplete="off"
+                         v-model="phone"
+                         @focus="showField"
+                         @input="checkFields"
                          @blur="checkFields" >
                   <p class="contact-us__field-error" v-text="phone_error"></p>
                 </div>
