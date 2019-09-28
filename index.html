@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Invite transportation service</title>
-  <link href="style.css?a0e58d6e5eae470d224a" rel="stylesheet"><script type="text/javascript" src="bundle.js?a0e58d6e5eae470d224a" defer></script></head>
+  <link href="style.css?5a4547c7d22b306a6c9b" rel="stylesheet"><script type="text/javascript" src="bundle.js?5a4547c7d22b306a6c9b" defer></script></head>
   <body>
       <section class="main-banner">
         <div class="main-header" id="home">
@@ -272,8 +272,10 @@
                          placeholder="Name"
                          class="contact-us__field"
                          autocomplete="off"
-                        v-model="name"
-                         @focus="showField" @blur="checkFields" >
+                         v-model="name"
+                         @focus="showField"
+                         @keypress="checkFields"
+                         @blur="checkFields" >
                   <p class="contact-us__field-error" v-text="name_error"></p>
                 </div>
               </div>
@@ -284,7 +286,9 @@
                         placeholder="Email"
                         autocomplete="off"
                         v-model="email"
-                         @focus="showField" @blur="checkFields" >
+                         @focus="showField"
+                         @keypress="checkFields"
+                         @blur="checkFields" >
                   <p class="contact-us__field-error" v-text="email_error"></p>
                 </div>
               </div>
@@ -296,7 +300,9 @@
                        class="contact-us__field"
                        autocomplete="off"
                        v-model="phone"
-                       @focus="showField" @blur="checkFields" >
+                       @focus="showField"
+                         @keypress="checkFields"
+                         @blur="checkFields" >
                   <p class="contact-us__field-error" v-text="phone_error"></p>
                 </div>
               </div>
