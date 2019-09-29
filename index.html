@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Invite transportation service</title>
-  <link href="style.css?8e34ae558a037ea82cb8" rel="stylesheet"><script type="text/javascript" src="bundle.js?8e34ae558a037ea82cb8" defer></script></head>
+  <link href="style.css?2abff3c8da1fe16d600d" rel="stylesheet"><script type="text/javascript" src="bundle.js?2abff3c8da1fe16d600d" defer></script></head>
   <body>
       <section class="main-banner">
         <div class="main-header" id="home">
@@ -269,11 +269,11 @@
               <div class="col-md-4">
                 <div class="contact-us__field-wrapper">
                   <input type="text"
+                         name="name"
                          placeholder="Name"
                          class="contact-us__field"
                          autocomplete="off"
                          v-model="name"
-                         @focus="showField"
                          @input="checkFields"
                          @blur="checkFields" >
                   <p class="contact-us__field-error" v-text="name_error"></p>
@@ -282,11 +282,11 @@
               <div class="col-md-4">
                 <div class="contact-form__field-wrapper">
                   <input type="email"
+                         name="email"
                          class="contact-us__field"
-                          placeholder="Email"
-                          autocomplete="off"
-                          v-model="email"
-                         @focus="showField"
+                         placeholder="Email"
+                         autocomplete="off"
+                         v-model="email"
                          @input="checkFields"
                          @blur="checkFields" >
                   <p class="contact-us__field-error" v-text="email_error"></p>
@@ -296,11 +296,11 @@
               <div class="col-md-4">
                 <div class="contact-form__field-wrapper">
                   <input type="phone"
+                         name="phone"
                          placeholder="380 XX XXX XX XX"
                          class="contact-us__field"
                          autocomplete="off"
                          v-model="phone"
-                         @focus="showField"
                          @input="checkFields"
                          @blur="checkFields" >
                   <p class="contact-us__field-error" v-text="phone_error"></p>
