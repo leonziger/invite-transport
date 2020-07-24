@@ -6,22 +6,26 @@
         <div class="col-md-4">
           <div class="contact-us__field-wrapper">
             <input type="text"
+                   name="name"
                    placeholder="Name"
                    class="contact-us__field"
                    autocomplete="off"
-                  v-model="name"
-                   @focus="showField" @blur="checkFields" >
+                   v-model="name"
+                   @input="checkFields"
+                   @blur="checkFields" >
             <p class="contact-us__field-error" v-text="name_error"></p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="contact-form__field-wrapper">
             <input type="email"
-                  class="contact-us__field"
-                  placeholder="Email"
-                  autocomplete="off"
-                  v-model="email"
-                   @focus="showField" @blur="checkFields" >
+                   name="email"
+                   class="contact-us__field"
+                   placeholder="Email"
+                   autocomplete="off"
+                   v-model="email"
+                   @input="checkFields"
+                   @blur="checkFields" >
             <p class="contact-us__field-error" v-text="email_error"></p>
           </div>
         </div>
@@ -29,11 +33,13 @@
         <div class="col-md-4">
           <div class="contact-form__field-wrapper">
             <input type="phone"
-                   placeholder="380000000000" @keypress="validPhone"
-                 class="contact-us__field"
-                 autocomplete="off"
-                 v-model="phone"
-                 @focus="showField" @blur="checkFields" >
+                   name="phone"
+                   placeholder="380 XX XXX XX XX"
+                   class="contact-us__field"
+                   autocomplete="off"
+                   v-model="phone"
+                   @input="checkFields"
+                   @blur="checkFields" >
             <p class="contact-us__field-error" v-text="phone_error"></p>
           </div>
         </div>

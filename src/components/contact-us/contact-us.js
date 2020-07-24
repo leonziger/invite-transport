@@ -11,9 +11,8 @@ new Vue({
     name_error: '',
     email_error: '',
     phone_error: '',
-    //checkPhoneField: /^\+380\d{3}\d{2}\d{2}\d{2}$/,
-    checkPhoneField: /^\d+$/,
-    сheckTextField: /^([А-Я]+[а-я]{2,})$/,
+    checkPhoneField: /^\d{12}$/,
+    сheckTextField: /^([а-яА-ЯЁёa-zA-Z\s]{4,})$/,
     checkEmailField: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   },
 
@@ -22,12 +21,11 @@ new Vue({
     checkForm: function(e) {
 
       this.checkFields(e);
-
-      if (this.name && this.phone && this.email) {
+      if (this.validName(this.name) && this.validPhone(this.phone) && this.validEmail(this.email)) {
         this.name_error = '';
         this.email_error = '';
         this.phone_error = '';
-          alert("Thanks for filling this form'");
+          alert(this.name + ", thanks for filling this form'");
         this.clearForm();
         return true;
       }
@@ -35,30 +33,41 @@ new Vue({
     },
 
     checkFields: function(e) {
-      e.target.classList.remove('contact-us__field_active');
+      const contactName = document.querySelector('[name="name"]')
+      const contactEmail = document.querySelector('[name="email"]')
+      const contactPhone = document.querySelector('[name="phone"]')
 
       if (!this.name) {
-        this.name_error = 'Write your name.';
+        this.name_error = 'Write your name';
+        contactName.classList.add('contact-us__field_active');
       } else if (!this.validName(this.name)) {
-        this.name_error = 'Write your correct name.';
+        this.name_error = 'Write your name correctly';
+        contactName.classList.add('contact-us__field_active');
       }  else {
         this.name_error = '';
+        contactName.classList.remove('contact-us__field_active');
       }
 
       if (!this.email) {
-        this.email_error = 'Write your email.';
+        this.email_error = 'Write your email';
+        contactEmail.classList.add('contact-us__field_active');
       } else if (!this.validEmail(this.email)) {
-        this.email_error = 'Write your correct email.';
+        this.email_error = 'Write your email correctly';
+        contactEmail.classList.add('contact-us__field_active');
       }  else {
         this.email_error = '';
+        contactEmail.classList.remove('contact-us__field_active');
       }
 
       if (!this.phone) {
-        this.phone_error = 'Write your phone.';
+        this.phone_error = 'Write your phone, 12 digits';
+        contactPhone.classList.add('contact-us__field_active');
       } else if (!this.validPhone(this.phone)) {
-        this.phone_error = 'Write your correct phone.';
+        this.phone_error = 'Write your phone correctly';
+        contactPhone.classList.add('contact-us__field_active');
       }  else {
         this.phone_error = '';
+        contactPhone.classList.remove('contact-us__field_active');
       }
 
     },
@@ -73,10 +82,6 @@ new Vue({
 
     validEmail(email) {
       return this.checkEmailField.test(email);
-    },
-
-    showField(e) {
-      e.target.classList.add('contact-us__field_active');
     },
 
     clearForm() {
